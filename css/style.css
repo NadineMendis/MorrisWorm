@@ -1,0 +1,447 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Styles */
+html,
+body {
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.7em;
+    background: url(../img/background-1.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    color: #fff;
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Ultra', serif;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    text-transform: uppercase;
+    color: #4c4c4c;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    border-top: 2px dashed #000;
+    border-bottom: 2px dashed #000;
+    padding: 10px 0;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 10px;
+}
+
+nav ul li a {
+    color: #4c4c4c;
+    text-decoration: none;
+    transition: 400ms ease-out;
+}
+
+nav ul li a:hover {
+    color: #7a5454;
+    text-decoration: 1px dashed #7a5454;
+}
+
+#hero,
+#what,
+#lesson,
+#cost,
+#references {
+    position: relative;
+    height: 100vh;
+}
+
+#hero {
+    background: url(../img/background-2.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+#hero .content {
+    line-height: 1;
+    z-index: 10;
+    position: relative;
+}
+
+#hero .content h3 {
+    color: #4c4c4c;
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+}
+
+#hero .content h1 {
+    color: #4c4c4c;
+    font-size: 60px;
+}
+
+#hero .content h2 {
+    color: #7a5454;
+    font-size: 120px;
+}
+
+#hero .content h2:hover {
+    color: #fff;
+}
+
+#hero .content p {
+    color: #4c4c4c;
+    font-size: 20px;
+    width: 20%;
+    font-weight: bold;
+}
+
+#hero .content .arrow {
+    width: 18px;
+    height: 66px;
+    margin: 20px 0;
+    position: relative;
+}
+
+#hero .img1 {
+    position: absolute;
+    width: 29%;
+    right: 0;
+    bottom: 0;
+    animation-name: move;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translateX(-40px) translateY(-40px) rotateZ(10deg);
+    }
+}
+
+#hero .img2 {
+    position: absolute;
+    width: 33%;
+    left: 0;
+    bottom: 27px;
+    animation-name: move2;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move2 {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translateX(40px) translateY(-40px) rotateZ(-5deg);
+    }
+}
+
+
+#what {
+    background: url(../img/background-3.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+#what img:nth-child(1) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    width: 25%;
+    float: right;
+    clear: none;
+    animation-iteration-count: infinite;
+    animation-name: move;
+    animation-duration: 12s;
+    animation-fill-mode: forwards;
+}
+
+
+#what .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    line-height: 1.3;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+#what .text h3 {
+    font-size: 58px;
+    color: #7a5454;
+    line-height: 1;
+}
+
+#what .text p {
+    font-size: 18px;
+    color: #4c4c4c;
+    margin-top: 20px;
+    text-align: justify;
+    text-align-last: center;
+    font-weight: 800;
+}
+
+#how {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    height: 100vh;
+    background: #000;
+}
+
+video {
+    object-fit: cover;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 1s opacity;
+}
+
+#how .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 70%;
+    margin: auto;
+}
+
+#how .content h2 {
+    font-size: 60px;
+}
+
+#how .content h2:hover {
+    color: #aaee16;
+    transition: ease-in;
+}
+
+#how .content h4 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#how .content p {
+    text-align: justify;
+    text-align-last: center;
+    color: #aaee16;
+    font-weight: 900;
+    margin-top: 30px;
+    width: 90%;
+}
+
+#cost {
+    background: #000;
+}
+
+#cost img:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#cost .content {
+    position: absolute;
+    padding: 0 223px;
+}
+
+#cost .content h4 {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+#cost .content h2 {
+    font-size: 80px;
+    color: #aaee16;
+    margin-bottom: 30px;
+}
+
+#cost .content h2:hover {
+    color: #7a5454;
+    transition: ease-in;
+}
+
+#cost .content p {
+    line-height: 1.4;
+    width: 90%;
+    font-weight: 900;
+    text-align: justify;
+    text-align-last: center;
+}
+
+#lesson {
+    background: #000;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+
+#lesson h3 {
+    color: #fff;
+    font-size: 25px;
+}
+
+#lesson h3:hover {
+    color: #7a5454;
+}
+
+#lesson h2 {
+    margin-top: 10px;
+    color: #aaee16;
+    font-size: 40px;
+}
+
+#lesson img:first-child {
+    position: absolute;
+    width: 30%;
+    z-index: 0;
+    top: -110px;
+    animation-name: move3;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move3 {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translateX(40px) translateY(-40px) rotateZ(5deg);
+    }
+}
+
+.content2 {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#lesson ol {
+    text-align: justify;
+    color: #fff;
+    margin-top: 10px;
+    font-weight: 800;
+}
+
+#lesson ol li {
+    padding: 10px 0;
+}
+
+#lesson ol li:hover {
+    color: #aaee16;
+}
+
+.content2 p {
+    margin-top: 20px;
+    font-weight: 900;
+    text-align: justify;
+    text-align-last: center;
+    line-height: 1.4;
+}
+
+footer {
+    width: 100%;
+    color: #fff;
+    background: #4c4c4c;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #aaee16;
+    text-decoration: none;
+}
+
+#references {
+    color: #fff;
+    background: #000;
+    text-align: left;
+}
+
+#references .content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#references .content p {
+    text-align: left;
+    margin-top: 20px;
+}
+
+#references a {
+    color: #aaee16;
+    text-decoration: none;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 1000;
+    border: none;
+    outline: none;
+    background-color: #aaee16;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#myBtn:hover {
+    background-color: #7a5454;
+}
+
+/* Utilities */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 20px;
+}
